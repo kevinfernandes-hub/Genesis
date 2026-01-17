@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth, setPersistence, browserLocalPersistence } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
 import { getAnalytics } from 'firebase/analytics'
 
 // Firebase configuration
@@ -18,6 +19,9 @@ const app = initializeApp(firebaseConfig)
 
 // Initialize Auth and enable local persistence
 export const auth = getAuth(app)
+
+// Initialize Firestore
+export const db = getFirestore(app)
 
 // Set persistence to LOCAL so users stay logged in across sessions
 setPersistence(auth, browserLocalPersistence).catch((error) => {
