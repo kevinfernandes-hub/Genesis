@@ -1,0 +1,8 @@
+.firebase/
+.next/
+out/
+.env.local
+.env.example
+*.md
+node_modules/
+.git/
